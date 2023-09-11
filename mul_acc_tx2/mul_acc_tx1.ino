@@ -69,15 +69,15 @@ bool detectFall(Vector3D accel) {
 }
 
 void sendFallDetected() {
-  Serial.println("Fall detected from Device 2!");
+  Serial.println("Fall detected from Device 1!");
   LoRa.beginPacket();
-  LoRa.print("Fall detected from Device 2");
+  LoRa.print("Fall detected from Device 1");
   LoRa.endPacket();
 }
 
 void sendNoFallDetected() {
-  Serial.println("No fall detected from Device 2");
+  Serial.println("No fall detected from Device 1");
   LoRa.beginPacket();
-  LoRa.print("No fall detected from Device 2");
+  LoRa.print("No fall detected from Device 1");
   LoRa.endPacket();
 }
