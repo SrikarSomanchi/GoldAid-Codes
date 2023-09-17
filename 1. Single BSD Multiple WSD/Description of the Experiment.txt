@@ -10,20 +10,20 @@ NOTE:  Users are encouraged to utilize the provided code and reference the exper
 Experimental Setup:
 
 1. GoldAid Devices (1 No. (BSD) + 2 or more (WSD))
+2. PC with installed Arduino IDE
+
+Procedure: 
+1. Upload the BSD code in the BSD device and the WSD code in the WSD device by changing the "Device IDs" within the code.
+2. Place the antennas of the devices in appropriate positions and place the devices at a certain distance.
+3. Observe and record the data transmission and data loss (if any).
 
 
-**Observations and Analysis:**
+Observations and Analysis
 
-During the experiment, the following observations and analyses are made:
+During the experiment, the following observations and analyses are possibly made:
+1. By changing the Spreadind Factor of the devices, the range varies accordingly.
+2. Loss in datapackets or no communication from few of the WSD nodes due to Data Collision.
 
-1. **Data Reception**: The receiver captures data packets from the multiple Tx devices. The experiment aims to determine if any data loss or packet collision occurs and how the receiver handles such situations.
-
-2. **Data Sorting**: The received data packets are sorted based on the unique identifiers or addressing information from each Tx device. This step helps in distinguishing data from different sources.
-
-3. **Packet Integrity**: The experiment assesses the integrity of the received data packets, checking for any corruption or loss due to interference.
-
-4. **Delay and Latency**: The experiment measures the delay or latency in receiving data from each Tx device to evaluate the timing aspects of multi-device communication.
-
-**Conclusion:**
+Conclusion:
 
 This experiment provides valuable insights into the capabilities of LoRa technology for handling data transmission from multiple Tx devices. It helps in understanding how data is sorted and processed by a single LoRa receiver, including the challenges and limitations associated with multi-device communication. The findings from this experiment contribute to the optimization and design of LoRa-based IoT and remote monitoring systems where multiple devices need to transmit data efficiently and reliably to a central receiver.
