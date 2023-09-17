@@ -1,0 +1,42 @@
+#include <TinyGPS++.h>
+#include <SoftwareSerial.h>
+// NEO-6M GPS Module Connections:
+// - NEO-6M RX to Arduino pin 11 (TX)
+// - NEO-6M TX to Arduino pin 10 (RX)
+// - NEO-6M VCC to Arduino 5V
+// - NEO-6M GND to Arduino GND
+// Define the serial connections for GPS and Serial Monitor
+SoftwareSerial gpsSerial(10, 11); 
+// Create a TinyGPS++ object
+TinyGPSPlus gps;
+
+void setup() {
+  // Start serial communication with a baud rate of 9600
+  Serial.begin(9600);
+  gpsSerial.begin(9600); // Initialize the software serial connection for the GPS module
+}
+
+void loop() {
+  // Read data from the GPS module
+  while (gpsSerial.available() > 0) {
+    if (gps.encode(gpsSerial.read())) {
+      // If new GPS data is available, update information
+      // Latitude and Longitude
+      if (gps.location.isValid()) {
+        Serial.print("Latitude: ");
+        Serial.print(gps.location.lat(), 6);
+        Serial.print("  Longitude: ");
+        Serial.println(gps.location.lng(), 6);
+      } else {
+        Serial.println("Location: Not Available");
+      }
+      // Altitude
+      if (gps.altitude.isValid()) {
+        Serial.print("Altitude (meters): ");
+        Serial.println(gps.altitude.meters());
+      } else {
+        Serial.println("Altitude: Not Available");
+      }
+    }
+  }
+}
