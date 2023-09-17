@@ -1,0 +1,29 @@
+Experiment Title: Multi-Device Data Transmission using a Single LoRa Receiver
+
+ 
+Experiment Description:
+
+In this experiment, we aim to investigate the process of transmitting data from multiple WSDs (Tx devices) to a single BSD (Rx devices), using LoRa and observe how the data is transmitted and sorted.
+
+NOTE:  Users are encouraged to utilize the provided code and reference the experimental setup image to gain practical insights into LoRa multi-device communication.
+
+Experimental Setup:
+
+1. GoldAid Devices (1 No. (BSD) + 2 or more (WSD))
+
+
+**Observations and Analysis:**
+
+During the experiment, the following observations and analyses are made:
+
+1. **Data Reception**: The receiver captures data packets from the multiple Tx devices. The experiment aims to determine if any data loss or packet collision occurs and how the receiver handles such situations.
+
+2. **Data Sorting**: The received data packets are sorted based on the unique identifiers or addressing information from each Tx device. This step helps in distinguishing data from different sources.
+
+3. **Packet Integrity**: The experiment assesses the integrity of the received data packets, checking for any corruption or loss due to interference.
+
+4. **Delay and Latency**: The experiment measures the delay or latency in receiving data from each Tx device to evaluate the timing aspects of multi-device communication.
+
+**Conclusion:**
+
+This experiment provides valuable insights into the capabilities of LoRa technology for handling data transmission from multiple Tx devices. It helps in understanding how data is sorted and processed by a single LoRa receiver, including the challenges and limitations associated with multi-device communication. The findings from this experiment contribute to the optimization and design of LoRa-based IoT and remote monitoring systems where multiple devices need to transmit data efficiently and reliably to a central receiver.
