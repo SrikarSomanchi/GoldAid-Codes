@@ -69,7 +69,7 @@ void loop() {
 
   if (sendHi) {
     LoRa.beginPacket();
-    LoRa.print("hi from WSD1");
+    LoRa.print("Hi from WSD1");
     LoRa.endPacket();
 
     Serial.println("Message sent from TX1: hi from WSD1");
